@@ -64,7 +64,7 @@ export function Details() {
                   {
                     data.links.map(link => (
                       <li key={String(link.id)}>
-                        <a href={link.url} target="_blank" rel="noreferrer">
+                        <a onClick={() => window.open(link.url, "_blank")}>
                           {link.url}
                         </a>
                       </li>
@@ -95,6 +95,6 @@ export function Details() {
         </main>
       }
 
-    </Container>
+    </Container >
   )
 }

@@ -13,6 +13,7 @@ import { Input } from '../../components/Input'
 import { api } from '../../services/api'
 
 import { Container, Form } from './styles'
+import { toast } from 'react-toastify'
 
 export function New() {
   const [title, setTitle] = useState("")
@@ -54,7 +55,7 @@ export function New() {
     }
 
     if (newLink) {
-      return alert("Last link was not clicked to add. Please click on the + sign or leave the field empty.")
+      return toast.success("Last link was not clicked to add. Please click on the + sign or leave the field empty.")
     }
 
     if (newTag) {
